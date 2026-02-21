@@ -5,7 +5,7 @@ const db = require("./db")
 const MenuItem = require("./models/MenuItem")
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
-
+require('dotenv').config();
 /*
 app.get("/",function(req,res)
 {
@@ -156,7 +156,9 @@ const menuitemRoutes = require("./routes/MenuItemRoutes")
 app.use("/person",personRoutes)
 app.use("/menuitem",menuitemRoutes)
 
-app.listen(3000,()=>
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT,()=>
 {
     console.log("Server is live");
     
