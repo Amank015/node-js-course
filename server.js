@@ -149,7 +149,7 @@ app.get("/person/:workType", async(req,res)=>
 
 })
 */
-
+// This is server.js file
 const personRoutes = require("./routes/PersonRoutes")
 const menuitemRoutes = require("./routes/MenuItemRoutes")
 // Use the routes
